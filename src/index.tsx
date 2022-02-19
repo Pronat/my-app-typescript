@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import App from "./App";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+    <App />,
+  // </React.StrictMode>,
+  //   <div>Hello!</div>,
   document.getElementById('root')
 );
 
@@ -15,3 +16,36 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
+
+
+
+// let a =  {
+//     name: "Don",
+//     age: 12,
+//     address: {
+//         city: "Minsk",
+//         country: "Belarus",
+//     }
+// };
+//
+// let users = [{
+//     name: "Don",
+//     age: 12,
+//     address: {
+//         city: "Minsk",
+//         country: "Belarus",
+//     }
+// },
+// {
+//     name: "Alex",
+//         age: 11,
+//     address: {
+//     city: "Minsk",
+//         country: "Belarus",
+// }
+// }];
+//
+// console.log(users[0].address.city);
