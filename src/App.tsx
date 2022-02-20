@@ -15,10 +15,12 @@ function App() {
     return (
         <div>
             <AppTitle/>
-            <Rating/>
+            Article 1
+            <Rating value={3} />
             <Star/>
             <Accordion />
-            <Rating/>
+            Article 2
+            <Rating value={4}/>
             {/*<div className="App">*/}
             {/*<header className="App-header">*/}
             {/*  <img src={logo} className="App-logo" alt="logo" />*/}
@@ -41,7 +43,7 @@ function App() {
 function AppTitle() {
     console.log("AppTitle rendered");
     return (
-        <> This is APP component </>
+        <div> This is APP component </div>
     )
 }
 
