@@ -1,27 +1,27 @@
 import App from "../../App";
 
-function Accordion() {
+function Accordion(props: any) {
     console.log("Accordion rendered");
     return (
         <div>
-            <AccordionTitle/>
-            <AccordionBody/>
+            <AccordionTitle title={props.title}/>
+            <AccordionBody title={props.title}/>
         </div>
     )
 }
 
-function AccordionTitle() {
+function AccordionTitle(props: any) {
     console.log("AccordionTitle rendered");
     return (
-        <h3>Меню</h3>
+        <h3>{props.title}</h3>
     )
 }
 
-function AccordionBody() {
+function AccordionBody(props: any) {
     console.log("AccordionBody rendered");
     return (
         <ul>
-            <li>1</li>
+            <li>{props.title}</li>
             <li>2</li>
             <li>3</li>
         </ul>

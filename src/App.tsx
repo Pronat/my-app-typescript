@@ -14,13 +14,20 @@ function App() {
     console.log("App rendered");
     return (
         <div>
-            <AppTitle/>
+            <PageTitle title={"This is APP component"}/>
+            <PageTitle title={"My friends"}/>
             Article 1
             <Rating value={3} />
             <Star/>
-            <Accordion />
+            <Accordion title={"This is first Accordion"}/>
+            <Accordion title={"Second accordion"}/>
             Article 2
+            <Rating value={0}/>
+            <Rating value={1}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
             <Rating value={4}/>
+            <Rating value={5}/>
             {/*<div className="App">*/}
             {/*<header className="App-header">*/}
             {/*  <img src={logo} className="App-logo" alt="logo" />*/}
@@ -40,10 +47,11 @@ function App() {
     );
 }
 
-function AppTitle() {
-    console.log("AppTitle rendered");
+function PageTitle(props: any) {
+            debugger
+    console.log("PageTitle rendered");
     return (
-        <div> This is APP component </div>
+        <h1>{ props.title }</h1>
     )
 }
 
