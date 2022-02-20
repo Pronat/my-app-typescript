@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Accordion from "./components/Accordion/Accordion";
+import {Rating, Star} from "./Rating/Rating";
 
 function hello() {
     console.log("hello rendered");
@@ -14,9 +15,9 @@ function App() {
     return (
         <div>
             <AppTitle/>
+            <Rating/>
             <Star/>
-            <Star/>
-            <Accordion/>
+            <Accordion />
             <Rating/>
             {/*<div className="App">*/}
             {/*<header className="App-header">*/}
@@ -44,53 +45,6 @@ function AppTitle() {
     )
 }
 
-function Star() {
-    console.log("Star rendered");
-    return (
-        <div>
-            star
-        </div>
-    )
-}
 
-function Rating() {
-    console.log("Rating rendered");
-    return (
-        <>
-            <Star/>
-            <Star/>
-            <Star/>
-        </>
-    );
-}
-
-function Accordion() {
-    console.log("Accordion rendered");
-    return (
-        <div>
-            <AccordionTitle/>
-            <AccordionBody/>
-        </div>
-    )
-}
-
-function AccordionTitle() {
-    console.log("AccordionTitle rendered");
-    return (
-        <h3>Меню</h3>
-    )
-}
-
-function AccordionBody() {
-    console.log("AccordionBody rendered");
-    return (
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
-    )
-
-}
 
 export default App;
