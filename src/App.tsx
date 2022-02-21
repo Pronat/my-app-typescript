@@ -14,14 +14,14 @@ function App() {
     console.log("App rendered");
     return (
         <div>
-            <PageTitle title={"This is APP component"}/>
-            <PageTitle title={"My friends"}/>
-            Article 1
-            <Rating value={3} />
-            <Star/>
-            <Accordion title={"This is first Accordion"}/>
-            <Accordion title={"Second accordion"}/>
-            Article 2
+            {/*<PageTitle title={"This is APP component"}/>*/}
+            {/*<PageTitle title={"My friends"}/>*/}
+            {/*Article 1*/}
+            {/*<Rating value={3} />*/}
+            {/*<Star/>*/}
+            {/*<Accordion title={"This is first Accordion"}/>*/}
+            {/*<Accordion title={"Second accordion"}/>*/}
+            {/*Article 2*/}
             <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>

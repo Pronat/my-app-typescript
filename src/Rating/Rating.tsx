@@ -1,6 +1,10 @@
 import React from "react";
 
 
+type RatingProps = {
+    value: number
+}
+
 export function Rating(props: any) {
     console.log("Rating rendered");
 
