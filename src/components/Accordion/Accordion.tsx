@@ -22,8 +22,8 @@ function AccordionBody(props: any) {
     return (
         <ul>
             <li>{props.title}</li>
-            <li>2</li>
-            <li>3</li>
+            <li>{props.title}</li>
+            <li>{props.title}</li>
         </ul>
     )
 
