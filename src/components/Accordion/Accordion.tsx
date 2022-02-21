@@ -1,23 +1,35 @@
 import App from "../../App";
 
-function Accordion(props: any) {
+type AccordionPropsType = {
+    titleValue: string;
+}
+
+function Accordion(props: AccordionPropsType) {
     console.log("Accordion rendered");
     return (
         <div>
-            <AccordionTitle title={props.title}/>
-            <AccordionBody title={props.title}/>
+            <AccordionTitle title={props.titleValue}/>
+            <AccordionBody title={props.titleValue}/>
         </div>
     )
 }
 
-function AccordionTitle(props: any) {
+type AccordionTitlePropsType = {
+    title: string;
+}
+
+function AccordionTitle(props: AccordionTitlePropsType) {
     console.log("AccordionTitle rendered");
     return (
         <h3>{props.title}</h3>
     )
 }
 
-function AccordionBody(props: any) {
+type AccordionBodyPropsType = {
+    title: string;
+}
+
+function AccordionBody(props: AccordionBodyPropsType) {
     console.log("AccordionBody rendered");
     return (
         <ul>

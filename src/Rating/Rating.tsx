@@ -75,8 +75,11 @@ export function Rating(props: RatingPropsType) {
     );
 }
 
+type StarPropsType = {
+    selected: true | false;
+}
 
-export function Star(props: any) {
+export function Star(props: StarPropsType) {
     console.log("Star rendered");
     if (props.selected === true) {
         return (<span><b>star </b></span>);
