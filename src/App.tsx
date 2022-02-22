@@ -14,20 +14,20 @@ function App() {
     console.log("App rendered");
     return (
         <div>
-            <PageTitle title={"This is APP component"}/>
-            <PageTitle title={"My friends"}/>
-            Article 1
-            <Rating value={3} />
-            <Star selected={true} />
-            <Accordion titleValue={"This is first Accordion"}/>
-            <Accordion titleValue={"Second accordion"}/>
-            Article 2
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
+            {/*<PageTitle title={"This is APP component"}/>*/}
+            {/*<PageTitle title={"My friends"}/>*/}
+            {/*Article 1*/}
+            {/*<Rating value={3} />*/}
+            {/*<Star selected={true} />*/}
+            <Accordion titleValue={"Menu"} collapsed={true}/>
+            <Accordion titleValue={"Users"} collapsed={false}/>
+            {/*Article 2*/}
+            {/*<Rating value={0}/>*/}
+            {/*<Rating value={1}/>*/}
+            {/*<Rating value={2}/>*/}
+            {/*<Rating value={3}/>*/}
+            {/*<Rating value={4}/>*/}
+            {/*<Rating value={5}/>*/}
             {/*<div className="App">*/}
             {/*<header className="App-header">*/}
             {/*  <img src={logo} className="App-logo" alt="logo" />*/}

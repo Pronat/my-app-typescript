@@ -2,16 +2,25 @@ import App from "../../App";
 
 type AccordionPropsType = {
     titleValue: string;
+    collapsed: boolean;
 }
 
 function Accordion(props: AccordionPropsType) {
     console.log("Accordion rendered");
-    return (
-        <div>
-            <AccordionTitle title={props.titleValue}/>
-            <AccordionBody title={props.titleValue}/>
-        </div>
-    )
+    if (props.collapsed == false) {
+        return (
+            <div>
+                <AccordionTitle title={props.titleValue}/>
+                <AccordionBody/>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <AccordionTitle title={props.titleValue}/>
+            </div>
+        )
+    }
 }
 
 type AccordionTitlePropsType = {
@@ -29,13 +38,13 @@ type AccordionBodyPropsType = {
     title: string;
 }
 
-function AccordionBody(props: AccordionBodyPropsType) {
+function AccordionBody() {
     console.log("AccordionBody rendered");
     return (
         <ul>
-            <li>{props.title}</li>
-            <li>{props.title}</li>
-            <li>{props.title}</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
         </ul>
     )
 
