@@ -2,22 +2,29 @@ import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating, Star} from "./Rating/Rating";
+import {OnOff} from "./components/OnOff/OnOff";
 
-function hello() {
-    console.log("hello rendered");
-    alert("Hello IT-KAMASUTRA")
-}
+// function hello() {
+//     console.log("hello rendered");
+//     alert("Hello IT-KAMASUTRA")
+// }
 
-hello();
+// hello();
 
 function App() {
     console.log("App rendered");
     return (
         <div>
 
-            <Accordion titleValue={"Menu"} collapsed={true}/>
-            <Accordion titleValue={"Users"} collapsed={false}/>
+           <OnOff message={"On"} active={true} />
 
+            {/*<Accordion titleValue={"Menu"} collapsed={true}/>*/}
+            {/*<Accordion titleValue={"Users"} collapsed={false}/>*/}
+            {/*<Rating value={1}/>*/}
+            {/*<Rating value={2}/>*/}
+            {/*<Rating value={3}/>*/}
+            {/*<Rating value={4}/>*/}
+            {/*<Rating value={5}/>*/}
         </div>
     );
 }
