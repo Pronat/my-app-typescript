@@ -7,21 +7,34 @@ type AccordionPropsType = {
 
 function Accordion(props: AccordionPropsType) {
     console.log("Accordion rendered");
-    if (props.collapsed == false) {
         return (
             <div>
                 <AccordionTitle title={props.titleValue}/>
-                <AccordionBody/>
-            </div>
-        )
-    } else {
-        return (
-            <div>
-                <AccordionTitle title={props.titleValue}/>
+                {false && <AccordionBody/>}
             </div>
         )
     }
-}
+// }function Accordion(props: AccordionPropsType) {
+//     console.log("Accordion rendered");
+//     if (props.collapsed === false) {
+//         debugger
+//         return (
+//             <div>
+//                 <AccordionTitle title={props.titleValue}/>
+//                 <AccordionBody/>
+//             </div>
+//         )
+//     } else {
+//         return (
+//             <div>
+//                 {true}
+//                 {1}
+//                 {'edgrgdfg'}
+//                 <AccordionTitle title={props.titleValue}/>
+//             </div>
+//         )
+//     }
+// }
 
 type AccordionTitlePropsType = {
     title: string;
