@@ -1,31 +1,36 @@
 import React from 'react';
 
-type OnOffPropsType = {
-    message: string
-    active: boolean
+type OnOffType = {
+    on: true | false
 }
 
-export const OnOff = (props: OnOffPropsType) => {
+export function OnOff(props: OnOffType) {
+    const onStyle = {
+        height:"20px",
+        width:"30px",
+        border:"1px solid black",
+        display:"inline-block",
+    }
+    const offStyle = {
+        height:"20px",
+        width:"30px",
+        border:"1px solid black",
+        display:"inline-block",
+    }
+    const indicatorStyle =  {
+        height:"10px",
+        width:"10px",
+        borderRadius:"15px",
+        border:"1px solid black",
+        display:"inline-block",
+    }
     return (
-        <div  className="circle">
-            <button onClick={onGreen} className="colorGreen">ON</button>
-            <button onClick={onRed}>OFF</button>
-        </div>
-    );
-};
-
-const onGreen = () => {
-    return(
-        <div className="circle">
-                Hello green!
+        <div>
+            <div style={onStyle}>On</div>
+            <div style={offStyle}>Off</div>
+            <div style={indicatorStyle}></div>
         </div>
     )
 }
 
-const onRed = () => {
-    return(
-        <div className="circle">
-                Hello red!
-        </div>
-    )
-}
+
