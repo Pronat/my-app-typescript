@@ -9,11 +9,11 @@ export function Rating(props: RatingPropsType) {
     console.log("Rating rendered");
     return (
         <div>
-            <Star selected={props.value > 0}/>
-            <Star selected={props.value > 1}/>
-            <Star selected={props.value > 2}/>
-            <Star selected={props.value > 3}/>
-            <Star selected={props.value > 4}/>
+            <Star selected={props.value > 0}/><button></button>
+            <Star selected={props.value > 1}/><button></button>
+            <Star selected={props.value > 2}/><button></button>
+            <Star selected={props.value > 3}/><button></button>
+            <Star selected={props.value > 4}/><button></button>
         </div>
     )
 }
