@@ -16,7 +16,9 @@ function App() {
     return (
         <div>
 
-           <OnOff on={true} />
+           <OnOff />
+           {/*<OnOff on={false} />*/}
+           {/*<OnOff on={true} />*/}
 
             {/*<Accordion titleValue={"Menu"} collapsed={true}/>*/}
             {/*<Accordion titleValue={"Users"} collapsed={false}/>*/}
