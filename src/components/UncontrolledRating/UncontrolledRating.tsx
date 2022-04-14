@@ -14,7 +14,7 @@ export function UncontrolledRating() {
             <Star selected={value > 1}/>
             <Star selected={value > 2}/>
             <Star selected={value > 3}/>
-            <Star selected={value > 4} />
+            <Star selected={value > 4}/>
         </div>
     )
 }
@@ -24,12 +24,12 @@ type StarPropsType = {
 
 export function Star(props: StarPropsType) {
     console.log("Star rendered");
-
-    if ( props.selected === true) {
-        return <span><b>star </b></span>
-    }   else {
-        <span>star </span>
-    }
+return props.selected ? <span><b>star </b></span> : <span>star</span>
+    // if ( props.selected === true) {
+    //     return <span><b>star </b></span>
+    // }   else {
+    //     <span>star </span>
+    // }
 
 // return props.selected ? <span><b>star </b></span> : <span>star </span>
 //     return
