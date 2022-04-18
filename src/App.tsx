@@ -1,20 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
-import {Rating, Star} from "./components/Rating/Rating";
+import {Rating, RatingValueType, Star} from "./components/Rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 
-// function hello() {
-//     console.log("hello rendered");
-//     alert("Hello IT-KAMASUTRA")
-// }
 
-// hello();
 
 function App() {
     console.log("App rendered");
+
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     return (
         <div>
 
@@ -27,7 +24,7 @@ function App() {
 
             <UncontrolledAccordion titleValue={"Menu"} />
             <UncontrolledAccordion titleValue={"Users"} />
-            <UncontrolledRating />
+            <Rating value={ratingValue}/>
             {/*<Rating value={2}/>*/}
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
