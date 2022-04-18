@@ -22,8 +22,8 @@ function App() {
            {/*<OnOff on={false} />*/}
            {/*<OnOff on={true} />*/}
 
-            <UncontrolledAccordion titleValue={"Menu"} />
-            <UncontrolledAccordion titleValue={"Users"} />
+            <UncontrolledAccordion titleValue={"Menu"}/>
+            <UncontrolledAccordion titleValue={"Users"}/>
             <Rating value={ratingValue}/>
             {/*<Rating value={2}/>*/}
             {/*<Rating value={3}/>*/}
