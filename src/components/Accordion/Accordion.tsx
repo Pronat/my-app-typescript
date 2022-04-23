@@ -1,48 +1,31 @@
 import App from "../../App";
+import {Dispatch, SetStateAction} from "react";
 
 type AccordionPropsType = {
     titleValue: string;
     collapsed: boolean;
+    onChange: ()=>void
 }
 
 function Accordion(props: AccordionPropsType) {
         return (
             <div>
-                <AccordionTitle title={props.titleValue}/>
+                <AccordionTitle title={props.titleValue} onChange={props.onChange} />
                 {!props.collapsed && <AccordionBody/>}
             </div>
         )
     }
-// }function Accordion(props: AccordionPropsType) {
-//     console.log("Accordion rendered");
-//     if (props.collapsed === false) {
-//         debugger
-//         return (
-//             <div>
-//                 <AccordionTitle title={props.titleValue}/>
-//                 <AccordionBody/>
-//             </div>
-//         )
-//     } else {
-//         return (
-//             <div>
-//                 {true}
-//                 {1}
-//                 {'edgrgdfg'}
-//                 <AccordionTitle title={props.titleValue}/>
-//             </div>
-//         )
-//     }
-// }
+
 
 type AccordionTitlePropsType = {
     title: string;
+    onChange: ()=>void
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
     console.log("AccordionTitle rendered");
     return (
-        <h3>{props.title}</h3>
+        <h3 onClick={props.onChange}>{props.title}</h3>
     )
 }
 
