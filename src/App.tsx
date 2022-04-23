@@ -4,14 +4,12 @@ import Accordion from "./components/Accordion/Accordion";
 import {Rating, RatingValueType, Star} from "./components/Rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
-import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
-
 
 
 function App() {
     console.log("App rendered");
 
-    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(2)
     return (
         <div>
 
@@ -24,7 +22,7 @@ function App() {
 
             <UncontrolledAccordion titleValue={"Menu"}/>
             <UncontrolledAccordion titleValue={"Users"}/>
-            <Rating value={ratingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             {/*<Rating value={2}/>*/}
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}

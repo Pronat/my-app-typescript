@@ -15,8 +15,6 @@ export function UncontrolledRating() {
             <Star selected={value > 2} setValue={setValue} value={3}/>
             <Star selected={value > 3} setValue={setValue} value={4}/>
             <Star selected={value > 4} setValue={setValue} value={5}/>
-            <Star selected={value > 5} setValue={setValue} value={6}/>
-            <Star selected={value > 6} setValue={setValue} value={7}/>
         </div>
     )
 }
