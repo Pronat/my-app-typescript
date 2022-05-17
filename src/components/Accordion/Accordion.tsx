@@ -1,13 +1,13 @@
 import App from "../../App";
 import {Dispatch, SetStateAction} from "react";
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
     titleValue: string;
     collapsed: boolean;
     onChange: ()=>void
 }
 
-function Accordion(props: AccordionPropsType) {
+export function Accordion(props: AccordionPropsType) {
         return (
             <div>
                 <AccordionTitle title={props.titleValue} onChange={props.onChange} />
