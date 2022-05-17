@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-type OnOffType = {
+export type OnOffType = {
     on: boolean
     onChange: (on: boolean)=>void
 }
