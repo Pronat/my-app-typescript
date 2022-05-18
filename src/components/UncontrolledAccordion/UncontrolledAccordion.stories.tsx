@@ -7,28 +7,13 @@ export default {
     component: UncontrolledAccordion,
     }
 const callback = action("uncontrolledAccordion")
-export const CollapsedMode = () => <UncontrolledAccordion titleValue={"Menu"} collapsed={true} onChange={callback} />
-export const UnCollapsedMode = () => <UncontrolledAccordion titleValue={"Users"} collapsed={false} onChange={callback} />
 
 
 export const ModeChanging = () =>{
-    const [change, setChange] = useState<boolean>(true)
     return(
-        <UncontrolledAccordion titleValue={"Users"} collapsed={change} onChange={()=>setChange(!change)} />
+        <UncontrolledAccordion titleValue={"Users"}  />
     )
 }
 
 
 
-
-
-
-
-
-
-    // export const Text = () => <Button onClick={action('clicked')}>Hello Button</Button>
-// export const Emoji = () => <Button onClick={action('clicked')}>
-//     <span role="img" aria-label="so cool">
-//         smile-smile
-//     </span>
-// </Button>
