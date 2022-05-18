@@ -7,16 +7,11 @@ export default {
     component: UncontrolledOnOff,
     }
 const callback = action("accordion mode change")
-export const OnMode = () => <UncontrolledOnOff  onChange={true}/>
-export const UnCollapsedMode = () => <UncontrolledOnOff titleValue={"Users"} collapsed={false} onChange={callback} />
+export const OnMode = () => <UncontrolledOnOff defaultValue={true} onChange={callback}/>
+export const OffMode = () => <UncontrolledOnOff defaultValue={false} onChange={callback} />
+export const DefaulInputValue = () => <input defaultValue={"yo"} onChange={()=>{alert("He")}}/>
 
 
-export const ModeChanging = () =>{
-    const [change, setChange] = useState<boolean>(true)
-    return(
-        <UncontrolledOnOff  collapsed={change} onChange={()=>setChange(!change)} />
-    )
-}
 
 
 
