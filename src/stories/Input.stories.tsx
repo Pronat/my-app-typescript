@@ -11,7 +11,6 @@ export const UncontrolledInput = () => <input />
 export const TrackValueOfUncontrolledInput = () => {
   let [value, setValue] = useState('')
   const onChange = (e:ChangeEvent<HTMLInputElement>)=>{
-    debugger
     const actualValue = e.currentTarget.value
     setValue(actualValue)
   }
@@ -36,4 +35,9 @@ export const GetValueOfUncontrolledInput = () => {
       </>
   )
 }
+
+export const ControlledInput = () => {
+
+}
+
 export const ControlledInputWithFixedValue = () => <input value={"Some string"} />
