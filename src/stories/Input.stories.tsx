@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {ChangeEvent, ChangeEventHandler, useRef, useState} from 'react';
 import {action} from '@storybook/addon-actions'
 
 export default {
@@ -10,7 +10,8 @@ export const UncontrolledInput = () => <input />
 
 export const TrackValueOfUncontrolledInput = () => {
   let [value, setValue] = useState('')
-  const onChange = (e)=>{
+  const onChange = (e:ChangeEvent<HTMLInputElement>)=>{
+    debugger
     const actualValue = e.currentTarget.value
     setValue(actualValue)
   }
