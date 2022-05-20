@@ -9,7 +9,7 @@ export default {
 const callback = action("accordion mode change")
 export const OnMode = () => <UncontrolledOnOff defaultValue={true} onChange={callback}/>
 export const OffMode = () => <UncontrolledOnOff defaultValue={false} onChange={callback} />
-export const DefaulInputValue = () => <input defaultValue={"yo"} onChange={()=>{alert("He")}}/>
+// export const DefaulInputValue = () => <input defaultValue={"yo"} onChange={()=>{alert("He")}}/>
 
 
 

@@ -15,7 +15,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 
 
-export const CollapsedMode = () => <Accordion titleValue={"Menu"} collapsed={true} onChange={callback} onClick={onClickCallback} />
+// export const CollapsedMode = () => <Accordion titleValue={"Menu"} collapsed={true} onChange={callback} onClick={onClickCallback} />
 export const UnCollapsedMode = () => <Accordion titleValue={"Users"} collapsed={false} onChange={callback} />
 
 
