@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {action} from '@storybook/addon-actions'
 
 export default {
@@ -7,23 +7,31 @@ export default {
 }
 
 export const UncontrolledInput = () => <input />
+
 export const TrackValueOfUncontrolledInput = () => {
   let [value, setValue] = useState('')
+  const onChange = (e)=>{
+    const actualValue = e.currentTarget.value
+    setValue(actualValue)
+  }
   return(
       <>
-      <input onChange={(e)=>{
-        const actualValue = e.currentTarget.value
-        setValue(actualValue)
-      }}/> - {value}
+      <input onChange={onChange}/> - {value}
       </>
   )
 }
 
 export const GetValueOfUncontrolledInput = () => {
-  let [value, setValue] = useState('')
+    const [value, setValue] = useState('')
+    const inputRef = useRef<HTMLInputElement>(null)
+  const save = () => {
+      const el = inputRef.current as HTMLInputElement
+    setValue(el.value)
+    }
+
   return(
       <>
-      <input onClick={()=>{setValue('Message')}}/> <button>save</button> - actual value:{value}
+      <input ref={inputRef} id={"inputID"} /> <button onClick={save}>save</button> - actual value: {value}
       </>
   )
 }
