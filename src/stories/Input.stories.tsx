@@ -32,7 +32,7 @@ export const GetValueOfUncontrolledInput = () => {
 
   return(
       <>
-      <input ref={inputRef} id={"inputID"} /> <button onClick={save}>save</button> - actual value: {value}
+      <input ref={inputRef} /> <button onClick={save}>save</button> - actual value: {value}
       </>
   )
 }
