@@ -8,14 +8,14 @@ export default {
     title: 'Accordion',
     component: Accordion,
     }
-const callback = action("accordion mode change")
+const callback = action("accordion mode change event fired")
 const onClickCallback = action("some item was clicked")
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 
 
-// export const CollapsedMode = () => <Accordion titleValue={"Menu"} collapsed={true} onChange={callback} onClick={onClickCallback} />
+
+export const CollapsedMode = () => <Accordion titleValue={"Menu"} collapsed={true} onChange={callback} />
 export const UnCollapsedMode = () => <Accordion titleValue={"Users"} collapsed={false} onChange={callback} />
 
 
