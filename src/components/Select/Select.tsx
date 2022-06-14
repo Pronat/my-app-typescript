@@ -12,10 +12,11 @@ type SelectPropsType = {
 }
 
 export function Select(props: SelectPropsType) {
+    const selectedItem = props.items.find(i => i.value === props.value)
     return (
         <div>
-            <div>{}</div>
-            {props.items.map(i => <div>{i.title}</div>)}
+            <div>{selectedItem && selectedItem.title}</div>
+            {props.items.map(i => <div key={i.value}>{i.title}</div>)}
         </div>
     )
 }
