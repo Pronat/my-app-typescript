@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {action} from '@storybook/addon-actions'
+import {Select} from "./Select";
 
 
 export default {
@@ -7,8 +8,15 @@ export default {
     component: Select,
     }
 
-export const Select = () => <Select value={0} onClick={x=>x} />
-}
+export const BaseExample = () => <Select
+    value={"1"}
+    onChange={action("Value changed")}
+    items={[
+        {value: "1", title: "Minsk"},
+        {value: "2", title: "Moscow"},
+        {value: "3", title: "Kiev"},
+    ]} />
+
 
 
 
