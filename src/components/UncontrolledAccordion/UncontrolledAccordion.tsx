@@ -1,22 +1,22 @@
-import React, {useState} from 'react';
+import React, {useReducer, useState} from 'react';
 
 type UncontrolledAccordionPropsType = {
     titleValue: string;
 }
 
 type ActionType = {
-    type: "NameFunction",
-    n: boolean
+    type: string
 }
 
-const reducer = (state: boolean, action:) => {
+const reducer = (state: boolean, action:ActionType) => {
     //dfdf rgrgr
     return state
 }
 
 export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
 
-let [collapsed, setCollapsed] = useState(true)
+// let [collapsed, setCollapsed] = useState(true)
+let [collapsed, dispatch] = useReducer(reducer,false)
         return (
             <div>
                 <AccordionTitle title={props.titleValue} onClick={()=>{setCollapsed(!collapsed)}}/>
