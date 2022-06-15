@@ -2,17 +2,24 @@ import React, {useState} from 'react';
 
 type UncontrolledAccordionPropsType = {
     titleValue: string;
-    //collapsed: boolean;
+}
+
+type ActionType = {
+    type: "NameFunction",
+    n: boolean
+}
+
+const reducer = (state: boolean, action:) => {
+    //dfdf rgrgr
+    return state
 }
 
 export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
 
-    // const collapsed = true
 let [collapsed, setCollapsed] = useState(true)
         return (
             <div>
                 <AccordionTitle title={props.titleValue} onClick={()=>{setCollapsed(!collapsed)}}/>
-                {/*<button onClick={()=>setCollapsed(!collapsed)}>TOGGLE</button>*/}
                 {!collapsed && <AccordionBody/>}
             </div>
         )
