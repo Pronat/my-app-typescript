@@ -9,7 +9,7 @@ type ActionType = {
 }
 
 const reducer = (state: boolean, action:ActionType) => {
-    //dfdf rgrgr
+
     return state
 }
 
