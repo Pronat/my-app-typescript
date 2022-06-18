@@ -8,8 +8,14 @@ type ActionType = {
     type: string
 }
 
+const TOGGLE_CONSTANT = "TOGGLE-COLLAPSED"
+
 const reducer = (state:boolean, action:ActionType) => {
-    if (action.type === "TOGGLE-COLLAPSED") {
+    console.log("REDUCER START")
+    console.log(state)
+    console.log(action)
+    console.log("REDUCER END")
+    if (action.type === TOGGLE_CONSTANT) {
         return (!state)
     }
     return state
@@ -21,7 +27,7 @@ let [collapsed, dispatch] = useReducer(reducer,false)
         return (
             <div>
                 {/*<AccordionTitle title={props.titleValue} onClick={()=>{setCollapsed(!collapsed)}}/>*/}
-                <AccordionTitle title={props.titleValue} onClick={()=>{dispatch({type:"TOGGLE-COLLAPSED"})}}/>
+                <AccordionTitle title={props.titleValue} onClick={()=>{dispatch({type: TOGGLE_CONSTANT})}}/>
                 {!collapsed && <AccordionBody/>}
             </div>
         )
