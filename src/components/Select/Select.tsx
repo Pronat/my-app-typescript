@@ -24,9 +24,9 @@ export function Select(props: SelectPropsType) {
     return (
         <>
             <select>
-                <option value="">Minsk</option>
-                <option value="">Moscow</option>
-                <option value="">Kiev</option>
+                <option value="">MINSK</option>
+                <option value="">MOSCOW</option>
+                <option value="">KIEV</option>
             </select>
         <div className={s.select}>
 
@@ -36,6 +36,7 @@ export function Select(props: SelectPropsType) {
                 active &&
                 <div className={s.items}>
                     {props.items.map(i => <div
+                        className={s.item + "" + (selectedItem=== i ? s.selected : "")}
                         key={i.value}
                         onClick={()=>{onItemClick(i.value)}}
                     >{i.title}
