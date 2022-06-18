@@ -12,8 +12,8 @@ export const WithValue = () => {
     const [value, setValue] = useState('2')
     return <>
         <Select
+            onChange={setValue}
             value={value}
-            onChange={action("Value changed")}
             items={[
                 {value: "1", title: "Minsk"},
                 {value: "2", title: "Moscow"},
@@ -23,11 +23,11 @@ export const WithValue = () => {
 }
 
 export const WithoutValue = () => {
-    const [value, setValue] = useState('2')
+    const [value, setValue] = useState(null)
     return <>
         <Select
-            value={null}
-            onChange={action("Value changed")}
+            onChange={setValue}
+            value={value}
             items={[
                 {value: "1", title: "Minsk"},
                 {value: "2", title: "Moscow"},

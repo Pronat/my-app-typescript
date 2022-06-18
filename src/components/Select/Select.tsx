@@ -16,19 +16,29 @@ export function Select(props: SelectPropsType) {
     const selectedItem = props.items.find(i => i.value === props.value)
     const [active, setActive] = useState(false)
     const toggleItems = () => setActive(!active)
+    const onItemClick = (value: any) => {
+        props.onChange(value);
+        toggleItems()
+    }
+
     return (
         <>
+            <select>
+                <option value="">Minsk</option>
+                <option value="">Moscow</option>
+                <option value="">Kiev</option>
+            </select>
         <div className={s.select}>
 
-            <span className={s.main} onClick={toggleItems}>{selectedItem && selectedItem.title}</span>
+            <span className={s.main} onClick={toggleItems}>
+                {selectedItem && selectedItem.title}</span>
             {
                 active &&
                 <div className={s.items}>
                     {props.items.map(i => <div
                         key={i.value}
-                        onClick={()=>{props.onChange(i.value)}}
+                        onClick={()=>{onItemClick(i.value)}}
                     >{i.title}
-
                     </div>)}
                 </div>
             }
