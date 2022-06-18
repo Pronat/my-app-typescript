@@ -11,12 +11,12 @@ export type ActionType = {
 
 export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
 // let [collapsed, setCollapsed] = useState(true)
-let [collapsed, dispatch] = useReducer(reducer, {collapsed: false})
+let [state, dispatch] = useReducer(reducer, {collapsed: false})
         return (
             <div>
                 {/*<AccordionTitle title={props.titleValue} onClick={()=>{setCollapsed(!collapsed)}}/>*/}
                 <AccordionTitle title={props.titleValue} onClick={()=>{dispatch({type: TOGGLE_CONSTANT})}}/>
-                {!collapsed && <AccordionBody/>}
+                {!state.collapsed && <AccordionBody/>}
             </div>
         )
     }

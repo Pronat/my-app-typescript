@@ -8,8 +8,9 @@ export const TOGGLE_CONSTANT = "TOGGLE-COLLAPSED"
 export const reducer = (state: StateType, action: ActionType): StateType => {
     switch (action.type) {
         case TOGGLE_CONSTANT:
-            state.collapsed = !state.collapsed
-            return state
+            const stateCopy = {...state}
+            stateCopy.collapsed = !stateCopy.collapsed
+            return stateCopy
         default:
             throw new Error('Invalid action')
     }
