@@ -5,7 +5,8 @@ export default {
 const NewMessagesCounter = (props: any) => {
     return <div>{props.count}</div>
 }
-const Users = (props: {users: Array<string>}) => {
+type UsersType =  {users: Array<string>}
+const Users = (props:UsersType) => {
     return <div>{
         {props.users.map((u,i)=> <div>{u}</div>)
     }</div>
