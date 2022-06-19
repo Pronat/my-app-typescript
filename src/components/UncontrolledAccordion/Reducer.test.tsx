@@ -16,6 +16,6 @@ test("fake type", () => {
     const state: StateType = {collapsed: true}
     // const newState = reducer(state, {type: TOGGLE_CONSTANT})
     expect(()=>{
-        reducer(state, {type: TOGGLE_CONSTANT})
+        reducer(state, {type: "FAKE"})
     }).toThrowError();
 })
