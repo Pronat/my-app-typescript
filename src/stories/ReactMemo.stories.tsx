@@ -21,10 +21,15 @@ const Users = React.memo(UsersSecret)
 export const Example1 = () => {
     const [counter, setCounter] = useState(0)
     const [users, setUsers] = useState(["Alex", "Anton", "Ornald", "Bold"])
+    const addUser = () => {
+        users.push('Sveta' + new Date().getTime())
+        setUsers(users)
+    }
 
     return <>
         <button onClick={() => {
             setCounter(counter + 1)}}>+</button>
+        <button onClick={addUser}>addUser</button>
         <NewMessagesCounter count={counter} />
         <Users users={users} />
     </>
