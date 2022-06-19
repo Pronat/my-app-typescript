@@ -17,15 +17,15 @@ function App() {
     return (
         <div>
 
-           {/*<OnOff />*/}
+           {/*<OnOff on={true} onChange={} />*/}
            {/*<OnOff />*/}
            {/*<OnOff />*/}
            {/*<OnOff />*/}
            {/*<OnOff on={false} />*/}
-           {/*<OnOff*/}
-           {/*    on={switchOn}*/}
-           {/*    onChange={(on)=>{setSwitchOn(on)}}*/}
-           {/*/>*/}
+           <OnOff
+               on={switchOn}
+               onChange={(on)=>{setSwitchOn(on)}}
+           />
            {/* <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}*/}
            {/**/}
            {/* <UncontrolledAccordion titleValue={"Menu"}/>*/}

@@ -4,6 +4,7 @@ export type OnOffType = {
     on: boolean
     onChange: (on: boolean)=>void
 }
+
 export function OnOff(props: OnOffType) {
 
     const onStyle = {
