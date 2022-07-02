@@ -56,11 +56,16 @@ export const HelpsToReactMemo = () => {
     console.log("HelpsToReactMemo")
     const [counter, setCounter] = useState(0)
     const [users, setUsers] = useState(["Alex", "Anton", "Ornald", "Bold"])
-    const newArray = users.filter(el=>el.toLowerCase().indexOf("a") > -1)
-
-    users.push('Sveta' + new Date().getTime())
+    const newArray = useMemo(()=> {
+        return users.filter(el=>el.toLowerCase().indexOf("a") > -1)}, [users])
+    const addUser = () => {
+        const newUsers = [...users, 'Sveta' + new Date().getTime()]
+        setUsers(newUsers)
+    }
+    // users.push('Sveta' + new Date().getTime())
     return <>
         <button onClick={() => {setCounter(counter + 1)}}>+</button>
+        <button onClick={() => {addUser()}}>addUser</button>
         {counter}
         <Users users={newArray} />
     </>
