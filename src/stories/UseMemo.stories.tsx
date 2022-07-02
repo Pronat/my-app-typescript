@@ -14,18 +14,21 @@ export const Example1 = () => {
     for (let i = 1; i <= a; i++) {
         resultA = resultA * i
     }
+
     for (let i = 1; i <= b; i++) {
         resultB = resultB * i
     }
+
+
     return <>
         <input value={a} onChange={(e) => setA(Number(e.currentTarget.value))}/>
         <input value={b} onChange={(e) => setB(+e.currentTarget.value)}/>
-        <hr/>
+        <hr />
         <div>
-            Result for a: {resultA}
+            result for a: {resultA}
+        </div><div>
+            result for b: {resultB}
         </div>
-        <div>
-            Result for b: {resultB}
-        </div>
+
     </>
 }
