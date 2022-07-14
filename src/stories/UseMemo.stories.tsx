@@ -71,3 +71,22 @@ export const HelpsToReactMemo = () => {
     </>
 
 }
+
+export const LikeUseCallback = () => {
+    console.log("LikeUseCallback")
+    const [counter, setCounter] = useState(0)
+    const [users, setUsers] = useState(["Alex", "Anton", "Ornald", "Bold"])
+    const newArray = useMemo(()=> {
+        return users.filter(el=>el.toLowerCase().indexOf("a") > -1)}, [users])
+    const addUser = () => {
+        const newUsers = [...users, 'Sveta' + new Date().getTime()]
+        setUsers(newUsers)
+    }
+    // users.push('Sveta' + new Date().getTime())
+    return <>
+        <button onClick={() => {setCounter(counter + 1)}}>+</button>
+        <button onClick={() => {addUser()}}>addUser</button>
+        {counter}
+        <Users users={newArray} />
+    </>
+}
