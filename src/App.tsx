@@ -19,7 +19,7 @@ function App() {
 
            {/*<OnOff on={true} onChange={} />*/}
            {/*<OnOff />*/}
-           {/*<OnOff />*/}
+
            {/*<OnOff />*/}
            {/*<OnOff on={false} />*/}
            <OnOff
