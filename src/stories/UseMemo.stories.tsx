@@ -82,12 +82,15 @@ export const LikeUseCallback = () => {
         const newUsers = [...books, 'Angular' + new Date().getTime()]
         setBooks(newUsers)
     }
+    const memoizedAddBook = useMemo(()=> {
+        return addBook
+    }, [books]);
     // users.push('Sveta' + new Date().getTime())
     return <>
         <button onClick={() => {setCounter(counter + 1)}}>+</button>
 
         {counter}
-        <Book addBook={addBook}/>
+        <Book addBook={memoizedAddBook}/>
         {/*<Book books={newArray} addBook={addBook}/>*/}
     </>
 }
