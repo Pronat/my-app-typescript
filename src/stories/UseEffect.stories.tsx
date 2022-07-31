@@ -6,6 +6,7 @@ export default {
 
 
 export const SimpleExample = () => {
+    const [fake, setFake] = useState(1)
     const [counter, setCounter] = useState(1)
 
     console.log("SimpleExample")
@@ -18,13 +19,12 @@ export const SimpleExample = () => {
         // indexedDB
         // document.getElementById
         // document.title = "Users"
-    })
+    },[counter])
 
 
     return <>
-        Hello, {counter}
-        <button onClick={() => setCounter(counter + 1)}>+</button>
-        {counter}
+        Hello, {counter} {fake}
+        <button onClick={() => setFake(fake + 1)}>+</button>
     </>
 
 }
