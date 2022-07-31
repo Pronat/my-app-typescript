@@ -1,4 +1,5 @@
 import React, {useEffect, useMemo, useState} from "react";
+import setSystemTime = jest.setSystemTime;
 
 export default {
     title: 'useEffect demo',
@@ -43,10 +44,14 @@ export const SimpleTimeoutExample = () => {
 
     console.log("SimpleExample")
 
-    useEffect(() => {
-        console.log("useEffect every render")
-        document.title = counter.toString()
-    })
+    // useEffect(() => {
+    //     console.log("useEffect every render")
+    //     document.title = counter.toString()
+    // })
+
+    setTimeout(() => {
+        document.title = counter.toString();
+    }, 1000);
 
     // api.getUsers().then('')
     // setInterval
