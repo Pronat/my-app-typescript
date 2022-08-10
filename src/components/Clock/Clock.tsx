@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 type PropsType = {
 
@@ -7,11 +7,14 @@ type PropsType = {
 export const Clock: React.FC<PropsType> = (props) => {
     const [date, setDate] = useState(new Date())
 
-    return <div>
-        <span>{date.getHours()}</span>
-        :
-        <span>{date.getMinutes()}</span>
-        :
-        <span>{date.getSeconds()}</span>
-    </div>
+    return (
+        <div>
+            <span>{date.getHours()}</span>
+            :
+            <span>{date.getMinutes()}</span>
+            :
+            <span>{date.getSeconds()}</span>
+        </div>
+    )
+
 }
