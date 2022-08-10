@@ -5,19 +5,19 @@ type PropsType = {}
 const StringCommon = (num: number) => num < 10 ? "0" + num : num
 
 export const Clock: React.FC<PropsType> = (props) => {
+    console.log("Tick")
     const [date, setDate] = useState(new Date())
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            setDate(new Date())
-        }, 1000)
+        const intId = setInterval(() => {
+            setDate(new Date)
+        },1000)
         return () => {
-            clearInterval(intervalId)
+            clearInterval(intId)
         }
     }, [])
 
 
-
-   return (
+    return (
         <div>
             <span>{StringCommon(date.getHours())}</span>
             :
