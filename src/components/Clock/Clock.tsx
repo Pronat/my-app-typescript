@@ -10,6 +10,8 @@ export const Clock: React.FC<PropsType> = (props) => {
         }, 1000)
     }, [])
 
+    const StringCommon = (num: number) => num < 10 ? "0" + num : num
+
     const stringWithSecons = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
     const stringWithMinutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
     const stringWithHours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
