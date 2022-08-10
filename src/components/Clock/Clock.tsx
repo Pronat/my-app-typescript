@@ -1,24 +1,24 @@
 import React, {useEffect, useState} from "react";
 
-type PropsType = {
-
-}
+type PropsType = {}
 
 export const Clock: React.FC<PropsType> = (props) => {
     const [date, setDate] = useState(new Date())
-   useEffect(() => {
-       setInterval(() => {
-           setDate(new Date())
-       }, 1000)
-   }, [])
+    useEffect(() => {
+        setInterval(() => {
+            setDate(new Date())
+        }, 1000)
+    }, [])
 
     const stringWithSecons = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
+    const stringWithMinutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
+    const stringWithHours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
 
     return (
         <div>
-            <span>{date.getHours()}</span>
+            <span>{stringWithHours}</span>
             :
-            <span>{date.getMinutes()}</span>
+            <span>{stringWithMinutes}</span>
             :
             <span>{stringWithSecons}</span>
         </div>
