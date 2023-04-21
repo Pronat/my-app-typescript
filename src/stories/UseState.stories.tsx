@@ -6,13 +6,15 @@ export default {
 
 function generateData() {
     console.log('generateData')
-    return 1
+    return 2425435646
 }
 
-// const initValue = useMemo(generateData, [])
+
 
 export const Example1 = () => {
     console.log("Example1")
+
+    const initValue = useMemo(generateData, [])
     const [counter, setCounter] = useState(generateData)
 
 
